@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+:root {
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --panel-2: #f7f6fb;
+  --text: #1b1b29;
+  --muted: #5a5a6e;
+  --accent: #673de6;
+  --accent-2: #4f2db8;
+  --accent-soft: #9b7ff0;
+  --border: #ece8f8;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 35%);
+  background-size: 26px 26px, 26px 26px, auto;
+  color: var(--text);
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  isolation: isolate;
+  background: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.theme-golden-black .btn-cta,
+.theme-golden-black button,
+.theme-golden-black .theme-pill {
+  box-shadow: none !important;
+}
+
+.theme-golden-black .btn-cta:hover {
+  filter: brightness(1.04);
+}
+
+.theme-golden-black .rounded-\[2rem\],
+.theme-golden-black .rounded-\[1\.5rem\],
+.theme-golden-black .rounded-full,
+.theme-golden-black .rounded-2xl {
+  background-image:
+    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
