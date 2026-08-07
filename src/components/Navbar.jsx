@@ -15,7 +15,7 @@ function Navbar() {
           <span className="text-sm sm:text-base">ER SKP & Associates</span>
         </a>
         <div className="flex items-center gap-3">
-          <nav className="hidden items-center gap-6 text-sm font-medium text-[color:var(--muted)] md:flex">
+          <nav className="hidden items-center gap-6 text-sm font-medium text-[color:var(--accent)] md:flex">
             <a href="#services" className="transition hover:text-[color:var(--accent)]">Services</a>
             <a href="#process" className="transition hover:text-[color:var(--accent)]">Process</a>
             <a href="#team" className="transition hover:text-[color:var(--accent)]">Team</a>

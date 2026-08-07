@@ -1,10 +1,11 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Process from './components/Process'
+import Gallery from './components/Gallery'
 import Team from './components/Team'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
@@ -17,6 +18,22 @@ const imageUrl = 'https://example.com/og-image.jpg'
 
 function App() {
   const themeName = 'goldenBlack'
+  const [isGalleryAll, setIsGalleryAll] = useState(false)
+
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '')
+    setIsGalleryAll(hash === 'gallery-all')
+  }, [])
+
+  useEffect(() => {
+    const onHashChange = () => {
+      const hash = window.location.hash.replace('#', '')
+      setIsGalleryAll(hash === 'gallery-all')
+    }
+
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
 
   const themeVars = useMemo(() => {
     const theme = themes[themeName] || themes.goldenBlack
@@ -36,7 +53,7 @@ function App() {
   const themeClassName = themeName === 'goldenBlack' ? 'theme-golden-black' : ''
 
   return (
-    <div className={`min-h-screen bg-[color:var(--bg)] text-[color:var(--text)] ${themeClassName}`.trim()} style={themeVars}>
+    <div className={`min-h-screen bg-[color:var(--bg)] text-[color:var(--text)] ${themeClassName} main-texture`.trim()} style={themeVars}>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -54,11 +71,18 @@ function App() {
       </Helmet>
       <Navbar />
       <main>
-        <Hero />
-        <Services />
-        <Process />
-        <Team />
-        <ContactForm />
+        {!isGalleryAll ? (
+          <>
+            <Hero />
+            <Services />
+            <Process />
+            <Gallery />
+            <Team />
+            <ContactForm />
+          </>
+        ) : (
+          <Gallery viewAll />
+        )}
       </main>
       <Footer />
       <WhatsAppButton />

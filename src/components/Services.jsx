@@ -1,6 +1,4 @@
 import { Building2, Home, Layers3, Palette, ScanLine, TestTube2, Wrench } from 'lucide-react'
-import { DEFAULT_MESSAGES } from '../config'
-import useWhatsApp from '../hooks/useWhatsApp'
 
 const services = [
   {
@@ -41,14 +39,14 @@ const services = [
 ]
 
 function Services() {
-  const { href } = useWhatsApp(DEFAULT_MESSAGES.services)
+  const href = 'https://wa.me/919456960121?text=Hello%20SKP%20Group%2C%20I%20would%20like%20to%20discuss%20your%20services%20and%20how%20you%20can%20support%20my%20project.'
 
   return (
     <section id="services" className="px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl">
           <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--accent)]">Our Core Services</p>
-          <h2 className="mt-3 text-3xl font-semibold text-[color:var(--text)] sm:text-4xl">Thoughtful design, strong structure, and smooth execution.</h2>
+          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Thoughtful design, strong structure, and smooth execution.</h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => {
@@ -58,9 +56,9 @@ function Services() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[color:var(--accent)] to-[color:var(--accent-soft)] text-white">
                   <Icon size={20} />
                 </div>
-                <h3 className="mt-6 text-xl font-semibold text-[color:var(--text)]">{service.title}</h3>
-                <p className="mt-3 text-base leading-7 text-[color:var(--muted)]">{service.text}</p>
-                <a href={href} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center text-sm font-semibold text-[color:var(--accent)]">
+                <h3 className="mt-6 text-xl font-semibold text-white">{service.title}</h3>
+                <p className="mt-3 text-base leading-7 text-[color:var(--accent)]">{service.text}</p>
+                <a href={href} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center text-sm font-semibold !text-white hover:!text-white">
                   Ask about this service
                 </a>
               </article>

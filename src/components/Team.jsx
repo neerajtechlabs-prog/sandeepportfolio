@@ -1,4 +1,4 @@
-import sandeepImage from '../assets/sandeep.svg'
+import sandeepCivilImage from '../assets/sandeep_civil.png'
 import eshaImage from '../assets/esha.svg'
 
 const team = [
@@ -6,7 +6,7 @@ const team = [
     name: 'Er. Sandeep Kumar Prajapati',
     role: 'Founder & Principal Engineer',
     bio: 'A seasoned consulting engineer with deep expertise in planning, structural thinking, and vastu-aligned design for modern homes and renovations.',
-    image: sandeepImage,
+    image: sandeepCivilImage,
   },
   {
     name: 'Er. Esha Prajapati',
@@ -26,7 +26,7 @@ function Team() {
         </div>
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {team.map((member) => (
-            <article key={member.name} className="rounded-[1.5rem] border border-[color:var(--border)] bg-[color:var(--panel)]/70 p-6">
+            <article key={member.name} className="flex h-full flex-col items-center justify-center rounded-[1.5rem] border border-[color:var(--border)] bg-[color:var(--panel)]/70 p-6 text-center">
               <div className="mx-auto flex h-56 w-56 items-center justify-center overflow-hidden rounded-full border-4 border-[color:var(--accent)] bg-[color:var(--panel-2)]/90 p-2 shadow-[0_18px_40px_rgba(0,0,0,0.35)]">
                 <img
                   src={member.image}
@@ -38,7 +38,7 @@ function Team() {
               </div>
               <h3 className="mt-6 text-xl font-semibold text-[color:var(--text)]">{member.name}</h3>
               <p className="mt-2 text-sm font-medium uppercase tracking-[0.25em] text-[color:var(--accent)]">{member.role}</p>
-              <p className="mt-4 leading-7 text-[color:var(--muted)]">{member.bio}</p>
+              <p className="mt-4 leading-7 text-[color:var(--accent)]">{member.bio}</p>
             </article>
           ))}
         </div>

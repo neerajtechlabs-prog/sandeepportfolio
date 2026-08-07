@@ -40,7 +40,7 @@ export const themes = {
     bg: '#0b0908',
     panel: '#14110e',
     'panel-2': '#1f1914',
-    text: '#f8e8bc',
+    text: '#ffffff',
     muted: '#bda56f',
     accent: '#d4af37',
     'accent-2': '#9b7b1f',
