@@ -11,7 +11,7 @@ const services = [
   {
     icon: Building2,
     title: 'Structural Design & RCC Detailing',
-    text: 'Strong structural planning with precise RCC detailing for safe and durable construction.',
+    text: 'Technical strength, IS Code compliant planning, and accurate RCC detailing for safe, durable construction.',
   },
   {
     icon: Palette,
@@ -36,7 +36,7 @@ const services = [
   {
     icon: ScanLine,
     title: 'Site Visit & Supervision',
-    text: 'On-ground support and site supervision to keep your project on track with clarity.',
+    text: 'On-ground support, rebar & quality checks, and site supervision to keep your project structurally safe and on track.',
   },
 ]
 

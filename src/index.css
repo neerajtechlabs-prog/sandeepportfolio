@@ -65,12 +65,24 @@ a {
   filter: brightness(1.04);
 }
 
+.theme-golden-black .feature-card-grid {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--panel);
+  background-image:
+    linear-gradient(90deg, rgba(212, 175, 55, 0.16) 1px, transparent 1px),
+    linear-gradient(rgba(212, 175, 55, 0.16) 1px, transparent 1px),
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.12), transparent 45%);
+  background-size: 24px 24px, 24px 24px, auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(212, 175, 55, 0.12);
+}
+
 .theme-golden-black .rounded-\[2rem\],
 .theme-golden-black .rounded-\[1\.5rem\],
 .theme-golden-black .rounded-full,
 .theme-golden-black .rounded-2xl {
   background-image:
-    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px),
-    linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px);
-  background-size: 18px 18px;
+    linear-gradient(90deg, rgba(212, 175, 55, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
 }

@@ -1,10 +1,10 @@
 import { ArrowRight, Compass, Layers3, Sparkles, Wrench } from 'lucide-react'
 
 const steps = [
-  { icon: Compass, title: 'Site Visit', text: 'We inspect your site, understand your needs, and map the opportunity with practical clarity.' },
-  { icon: Sparkles, title: 'Vastu Naksha & Planning', text: 'We create vastu-aware layouts and concept planning centered on comfort and flow.' },
-  { icon: Layers3, title: '3D & Estimation', text: 'We shape elevation ideas and prepare a practical estimate for your dream build.' },
-  { icon: Wrench, title: 'Execution Support & Site Supervision', text: 'We stay involved with site support so execution remains smooth, aligned, and stress-free.' },
+  { icon: Compass, title: 'Site Visit & Analysis', text: 'We inspect your site, understand your needs, and assess the project with practical clarity.' },
+  { icon: Sparkles, title: 'Vastu Naksha & Planning', text: 'We prepare vastu-aware layouts and planning concepts centered on comfort, flow, and long-term usability.' },
+  { icon: Layers3, title: '3D Visualization & Estimation', text: 'We shape elevation ideas and provide a practical estimate so your dream build is clear from the start.' },
+  { icon: Wrench, title: 'Execution Support & Quality Control', text: 'We stay involved with site support, rebar checks, and quality oversight to keep execution safe and aligned.' },
 ]
 
 function Process() {

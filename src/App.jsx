@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { Helmet } from 'react-helmet-async'
 import './App.css'
 import Navbar from './components/Navbar'
@@ -9,33 +9,17 @@ import Team from './components/Team'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
-import { themeOrder, themes } from './themeConfig'
+import { themes } from './themeConfig'
 
 const title = 'ER SKP & Associates | Consulting Engineer & Vastu Expert in Meerut'
 const description = 'ER SKP & Associates offers house planning, structural design, interior design, 3D elevation, costing, soil testing, and site supervision in Meerut.'
 const imageUrl = 'https://example.com/og-image.jpg'
 
 function App() {
-  const [themeName, setThemeName] = useState('violet')
-  const [previousThemeName, setPreviousThemeName] = useState('violet')
-
-  const handleThemeChange = (nextTheme) => {
-    if (nextTheme !== themeName) {
-      setPreviousThemeName(themeName)
-      setThemeName(nextTheme)
-    }
-  }
-
-  const handlePreviousTheme = () => {
-    if (previousThemeName && previousThemeName !== themeName) {
-      const nextTheme = previousThemeName
-      setPreviousThemeName(themeName)
-      setThemeName(nextTheme)
-    }
-  }
+  const themeName = 'goldenBlack'
 
   const themeVars = useMemo(() => {
-    const theme = themes[themeName] || themes.violet
+    const theme = themes[themeName] || themes.goldenBlack
     return {
       '--bg': theme.bg,
       '--panel': theme.panel,
@@ -68,12 +52,7 @@ function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Helmet>
-      <Navbar
-        currentTheme={themeName}
-        previousTheme={previousThemeName}
-        onThemeChange={handleThemeChange}
-        onPreviousTheme={handlePreviousTheme}
-      />
+      <Navbar />
       <main>
         <Hero />
         <Services />

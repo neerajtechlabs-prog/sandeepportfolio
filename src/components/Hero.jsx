@@ -42,7 +42,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="rounded-[2rem] border border-[color:var(--border)] bg-[color:var(--panel)]/90 p-8 shadow-[0_20px_60px_rgba(103,61,230,0.12)] backdrop-blur">
+        <div className="feature-card-grid rounded-[2rem] border border-[color:var(--border)] bg-[color:var(--panel)]/90 p-8 shadow-[0_20px_60px_rgba(103,61,230,0.12)] backdrop-blur">
           <div className="flex items-center justify-between border-b border-[color:var(--border)] pb-4">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--accent)]">What we do best</p>

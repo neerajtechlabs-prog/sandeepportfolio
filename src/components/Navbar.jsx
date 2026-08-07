@@ -1,9 +1,8 @@
 import { PhoneCall } from 'lucide-react'
 import { DEFAULT_MESSAGES } from '../config'
 import useWhatsApp from '../hooks/useWhatsApp'
-import { themes, themeOrder } from '../themeConfig'
 
-function Navbar({ currentTheme, previousTheme, onThemeChange, onPreviousTheme }) {
+function Navbar() {
   const { href } = useWhatsApp(DEFAULT_MESSAGES.hero)
 
   return (
@@ -16,25 +15,6 @@ function Navbar({ currentTheme, previousTheme, onThemeChange, onPreviousTheme })
           <span className="text-sm sm:text-base">ER SKP & Associates</span>
         </a>
         <div className="flex items-center gap-3">
-          <button
-            type="button"
-            onClick={onPreviousTheme}
-            className="rounded-full border border-[color:var(--border)] bg-[color:var(--panel-2)] px-3 py-1 text-xs font-semibold text-[color:var(--muted)] transition hover:text-[color:var(--text)]"
-          >
-            Previous: {themes[previousTheme]?.name || 'Theme'}
-          </button>
-          <div className="flex items-center gap-2 rounded-full border border-[color:var(--border)] bg-[color:var(--panel-2)] p-1">
-            {themeOrder.map((key) => (
-              <button
-                key={key}
-                type="button"
-                onClick={() => onThemeChange(key)}
-                className={`rounded-full px-3 py-1 text-xs font-semibold transition ${currentTheme === key ? 'bg-[color:var(--accent)] text-white' : 'text-[color:var(--muted)] hover:text-[color:var(--text)]'}`}
-              >
-                {themes[key].name}
-              </button>
-            ))}
-          </div>
           <nav className="hidden items-center gap-6 text-sm font-medium text-[color:var(--muted)] md:flex">
             <a href="#services" className="transition hover:text-[color:var(--accent)]">Services</a>
             <a href="#process" className="transition hover:text-[color:var(--accent)]">Process</a>
