@@ -10,6 +10,7 @@
   --accent-2: #4f2db8;
   --accent-soft: #9b7ff0;
   --border: #ece8f8;
+
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -29,12 +30,17 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+
   background-color: var(--bg);
+
+  /* Grid removed */
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 35%);
-  background-size: 26px 26px, 26px 26px, auto;
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.12),
+      transparent 35%
+    );
+
   color: var(--text);
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
@@ -64,34 +70,85 @@ a {
   filter: brightness(1.04);
 }
 
+/* =========================================
+   GOLDEN BLACK THEME
+   ========================================= */
+
 .theme-golden-black.main-texture {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 35%),
-    radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.08), transparent 18%);
-  background-size: 30px 30px, 30px 30px, 450px 450px, 380px 380px;
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.06),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(0, 0, 0, 0.08),
+      transparent 18%
+    );
+
+  background-size: 450px 450px, 380px 380px;
   background-blend-mode: overlay;
 }
+
+/* =========================================
+   FEATURE CARDS
+   ========================================= */
 
 .theme-golden-black .feature-card-grid {
   position: relative;
   overflow: hidden;
+
   background-color: var(--panel);
+
+  /* Grid removed */
   background-image:
-    linear-gradient(90deg, rgba(212, 175, 55, 0.16) 1px, transparent 1px),
-    linear-gradient(rgba(212, 175, 55, 0.16) 1px, transparent 1px),
-    radial-gradient(circle at top left, rgba(212, 175, 55, 0.12), transparent 45%);
-  background-size: 24px 24px, 24px 24px, auto;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(212, 175, 55, 0.12);
+    radial-gradient(
+      circle at top left,
+      rgba(212, 175, 55, 0.12),
+      transparent 45%
+    );
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(212, 175, 55, 0.12);
 }
+
+/* =========================================
+   ROUNDED CARDS
+   ========================================= */
+
+/* Grid removed from rounded cards */
 
 .theme-golden-black .rounded-\[2rem\],
 .theme-golden-black .rounded-\[1\.5rem\],
 .theme-golden-black .rounded-full,
 .theme-golden-black .rounded-2xl {
-  background-image:
-    linear-gradient(90deg, rgba(212, 175, 55, 0.08) 1px, transparent 1px),
-    linear-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px);
-  background-size: 20px 20px;
+  background-image: none;
+}
+
+.contact-input {
+  width: 100%;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 14px;
+  background: rgba(31, 25, 20, 0.85);
+  padding: 13px 14px;
+  font-size: 13px;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.contact-input::placeholder {
+  color: rgba(212, 175, 55, 0.85);
+}
+
+.contact-input:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.contact-input:focus {
+  border-color: #d4af37;
+  background: rgba(35, 29, 23, 0.95);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.08);
 }

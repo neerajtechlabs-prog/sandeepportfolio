@@ -1,4 +1,4 @@
-import { ArrowRight, BadgeCheck, Sparkles } from 'lucide-react'
+import { ArrowRight} from 'lucide-react'
 import { DEFAULT_MESSAGES } from '../config'
 import useWhatsApp from '../hooks/useWhatsApp'
 
@@ -31,7 +31,7 @@ function Hero() {
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--panel)]/80 p-4 shadow-sm">
-              <p className="text-2xl font-semibold text-white">13+ Years</p>
+              <p className="text-2xl font-semibold text-white">13+ Years of experience</p>
               <p className="mt-1 text-sm text-[color:var(--accent)]">Experience in planning & execution</p>
             </div>
             <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--panel)]/80 p-4 shadow-sm">
@@ -41,23 +41,23 @@ function Hero() {
           </div>
         </div>
 
-        <div className="feature-card-grid rounded-[2rem] border border-[color:var(--border)]  p-8 shadow-[0_20px_60px_rgba(103,61,230,0.12)] backdrop-blur">
-          <div className="flex items-center justify-between border-b border-[color:var(--border)] pb-4">
+        <div className="feature-card-grid rounded-[2rem] border border-[color:var(--border)] bg-[color:var(--panel)]/95 p-8 shadow-[0_20px_60px_rgba(103,61,230,0.12)]">
+          <div className="flex flex-col gap-4 border-b border-[color:var(--border)] pb-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--accent)]">What we do best</p>
-              <h2 className="mt-2 text-2xl font-semibold text-white">From concept to completion, with clarity and care</h2>
+              <h2 className="mt-2 text-1.5xl font-semibold text-[color:var(--text)]">From concept to completion, with clarity and care</h2>
             </div>
-            <div className="rounded-full border border-[color:var(--border)] px-6 py-2 text-sm uppercase tracking-[0.25em] text-white">Delhi NCR</div>
+            <div className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-[color:var(--accent)]/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-[color:var(--accent)] shadow-sm">Delhi NCR</div>
           </div>
-          <div className="mt-6 space-y-4">
+          <div className="mt-19 space-y-4">
             {[
               ['House Planning', 'Vastu-based layouts for modern homes and renovations'],
               ['Structural Design', 'Safe and practical RCC planning for lasting strength'],
               ['Interior Design', 'Elegant spaces with 3D visualization and detailing'],
             ].map(([title, text]) => (
-              <div key={title} className="rounded-2xl border border-[color:var(--border)]/70 bg-[color:var(--panel-2)]/80 p-4">
+              <div key={title} className="rounded-2xl border border-[color:var(--border)]/70 bg-[color:var(--panel)]/95 p-5 shadow-sm">
                 <p className="font-semibold text-[color:var(--accent)]">{title}</p>
-                <p className="mt-1 text-sm font-semibold text-white">{text}</p>
+                <p className="mt-2 text-sm text-[color:var(--text)]">{text}</p>
               </div>
             ))}
           </div>
