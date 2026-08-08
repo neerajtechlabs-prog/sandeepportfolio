@@ -10,16 +10,15 @@ function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(103,61,230,0.12),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(155,127,240,0.12),_transparent_35%)]" />
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="space-y-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--border)] bg-[color:var(--panel)]/80 px-4 py-2 text-sm text-[color:var(--accent)] shadow-sm">
-            <Sparkles size={16} className="text-[color:var(--accent)]" />
-            Sahi Design, Majboot Nirman - Sukhad aur Samriddh Jeevan
+          <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--border)] bg-[color:var(--panel)]/80 px-4 py-2 text-base font-semibold text-[color:var(--accent)] shadow-sm sm:text-lg">
+            सही डिज़ाइन, मजबूत निर्माण — सुखद और समृद्ध जीवन
           </div>
           <div className="space-y-5">
             <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
               Consulting Engineer & Vastu Expert for beautiful, strong, and vastu-compliant homes.
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-[color:var(--accent)] sm:text-xl">
-              With 13+ years of experience and 250+ projects delivered, ER SKP & Associates helps families in Meerut and nearby NCR build homes that are smart, strong, and spiritually aligned.
+              With 13+ years of experience and 250+ projects delivered, SKP & Associates helps families in Meerut and nearby NCR build homes that are smart, strong, and spiritually aligned.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
@@ -48,7 +47,7 @@ function Hero() {
               <p className="text-sm uppercase tracking-[0.3em] text-[color:var(--accent)]">What we do best</p>
               <h2 className="mt-2 text-2xl font-semibold text-white">From concept to completion, with clarity and care</h2>
             </div>
-            <div className="rounded-full border border-[color:var(--border)] px-3 py-1 text-xs uppercase tracking-[0.25em] text-[color:var(--accent)]">Meerut</div>
+            <div className="rounded-full border border-[color:var(--border)] px-6 py-2 text-sm uppercase tracking-[0.25em] text-white">Delhi NCR</div>
           </div>
           <div className="mt-6 space-y-4">
             {[
@@ -58,7 +57,7 @@ function Hero() {
             ].map(([title, text]) => (
               <div key={title} className="rounded-2xl border border-[color:var(--border)]/70 bg-[color:var(--panel-2)]/80 p-4">
                 <p className="font-semibold text-[color:var(--accent)]">{title}</p>
-                <p className="mt-1 text-sm text-[color:var(--accent)]">{text}</p>
+                <p className="mt-1 text-sm font-semibold text-white">{text}</p>
               </div>
             ))}
           </div>

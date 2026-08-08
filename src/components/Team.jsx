@@ -1,15 +1,15 @@
 import sandeepCivilImage from '../assets/sandeep_civil.png'
-import eshaImage from '../assets/esha.svg'
+import eshaImage from '../assets/Isha.jpeg'
 
 const team = [
   {
-    name: 'Er. Sandeep Kumar Prajapati',
+    name: 'Er Sandeep Kumar',
     role: 'Founder & Principal Engineer',
     bio: 'A seasoned consulting engineer with deep expertise in planning, structural thinking, and vastu-aligned design for modern homes and renovations.',
     image: sandeepCivilImage,
   },
   {
-    name: 'Er. Esha Prajapati',
+    name: 'Er Esha Prajapati',
     role: 'Head - Interior & 3D Visualization',
     bio: 'An interior and visualization specialist focused on elegant spaces, thoughtful detailing, and clear design communication.',
     image: eshaImage,
@@ -36,9 +36,9 @@ function Team() {
                   className="h-full w-full rounded-full object-cover object-center"
                 />
               </div>
-              <h3 className="mt-6 text-xl font-semibold text-[color:var(--text)]">{member.name}</h3>
+              <h3 className="mt-6 text-base font-semibold text-[color:var(--text)]">{member.name}</h3>
               <p className="mt-2 text-sm font-medium uppercase tracking-[0.25em] text-[color:var(--accent)]">{member.role}</p>
-              <p className="mt-4 leading-7 text-[color:var(--accent)]">{member.bio}</p>
+              <p className="mt-4 text-base leading-7 text-white">{member.bio}</p>
             </article>
           ))}
         </div>

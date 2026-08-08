@@ -12,8 +12,8 @@ import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
 import { themes } from './themeConfig'
 
-const title = 'ER SKP & Associates | Consulting Engineer & Vastu Expert in Meerut'
-const description = 'ER SKP & Associates offers house planning, structural design, interior design, 3D elevation, costing, soil testing, and site supervision in Meerut.'
+const title = 'SKP & Associates | Consulting Engineer & Vastu Expert in Meerut'
+const description = 'SKP & Associates offers house planning, structural design, interior design, 3D elevation, costing, soil testing, and site supervision in Meerut.'
 const imageUrl = 'https://example.com/og-image.jpg'
 
 function App() {

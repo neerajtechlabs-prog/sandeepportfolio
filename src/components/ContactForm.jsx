@@ -62,9 +62,19 @@ function ContactForm() {
             From house planning to site supervision, we make the journey simple, practical, and vastu-aware. Drop your details and we’ll get back to you quickly.
           </p>
           <div className="mt-6 space-y-3 text-[color:var(--accent)]">
+            <p>� Delhi NCR</p>
+            <p>📍 Plot-11, Gopal Vihar, Near Subharti University, NH-58 Bypass, Meerut-250002 (U.P.)</p>
             <p>📞 +91 94569 60121</p>
             <p>✉️ skpgroup.official@gmail.com</p>
-            <p>📍 Plot-11, Gopal Vihar, Near Subharti University, NH-58 Bypass, Meerut-250002 (U.P.)</p>
+          </div>
+          <div className="mt-6 overflow-hidden rounded-3xl border border-[color:var(--border)]">
+            <iframe
+              title="SKP & Associates location map"
+              className="h-72 w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Plot-11,+Gopal+Vihar,+Near+Subharti+University,+NH-58+Bypass,+Meerut-250002+(U.P.)&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            />
           </div>
         </div>
         <form className="space-y-4" onSubmit={handleSubmit}>
