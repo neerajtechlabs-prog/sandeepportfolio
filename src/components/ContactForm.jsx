@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Send } from 'lucide-react'
 import { DEFAULT_MESSAGES } from '../config'
 import useWhatsApp from '../hooks/useWhatsApp'
@@ -45,7 +45,7 @@ function ContactForm() {
     }))
   }
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
 
     setStatus('')
@@ -62,26 +62,10 @@ function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.message || 'Unable to send enquiry')
-      }
+      window.open(href, '_blank', 'noopener,noreferrer')
 
       setStatus('success')
 
-      // Open WhatsApp after successful email submission
-      window.open(href, '_blank', 'noopener,noreferrer')
-
-      // Reset form
       setFormData({
         firstName: '',
         lastName: '',
@@ -97,6 +81,18 @@ function ContactForm() {
       setIsSubmitting(false)
     }
   }
+
+  useEffect(() => {
+    if (status !== 'success') {
+      return
+    }
+
+    const timeout = setTimeout(() => {
+      setStatus('')
+    }, 5000)
+
+    return () => clearTimeout(timeout)
+  }, [status])
 
   return (
     <section
@@ -207,15 +203,31 @@ function ContactForm() {
             </div>
 
             {/* ROW 3 - PROJECT TYPE */}
-            <input
-              type="text"
+            <select
               name="projectType"
               value={formData.projectType}
               onChange={handleChange}
-              placeholder="Project type"
               required
-              className="contact-input w-full"
-            />
+              className="contact-input w-full cursor-pointer"
+            >
+              <option value="" disabled>
+                Select project type
+              </option>
+
+              <option value="Construction">Construction</option>
+              <option value="Interior 3D Design">Interior 3D Design</option>
+              <option value="Vastu Consultation">Vastu Consultation</option>
+              <option value="3D Home Design">3D Home Design</option>
+              <option value="2D Home Design">2D Home Design</option>
+              <option value="House Planning">House Planning</option>
+              <option value="Structural Design">Structural Design</option>
+              <option value="Elevation Design">Elevation Design</option>
+              <option value="Renovation">Renovation</option>
+              <option value="Site Supervision">Site Supervision</option>
+              <option value="Estimation & Costing">Estimation & Costing</option>
+              <option value="Complete Home Project">Complete Home Project</option>
+              <option value="Other">Other</option>
+            </select>
 
             {/* ROW 4 - MESSAGE */}
             <textarea

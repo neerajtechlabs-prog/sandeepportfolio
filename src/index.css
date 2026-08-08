@@ -139,6 +139,16 @@ a {
   transition: all 0.25s ease;
 }
 
+.contact-input option {
+  background-color: #1f1915;
+  color: #ffffff;
+}
+
+.contact-input option:checked {
+  background-color: #d4af37;
+  color: #000000;
+}
+
 .contact-input::placeholder {
   color: rgba(212, 175, 55, 0.85);
 }
