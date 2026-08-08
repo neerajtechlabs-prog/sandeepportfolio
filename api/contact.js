@@ -27,7 +27,7 @@ export default async function handler(req, res) {
 
     const { data, error } = await resend.emails.send({
       from: 'SKP Group Website <onboarding@resend.dev>',
-      to: ['skpgroup.official@gmail.com'],
+      to: ['skpgroup.official@gmail.com', 'neeshubiet@gmail.com'],
       replyTo: email,
       subject: `New Project Enquiry - ${firstName} ${lastName}`,
       html: `

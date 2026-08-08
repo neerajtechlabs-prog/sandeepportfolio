@@ -16,16 +16,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
-          cache-dependency-path: skp-group-website/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: skp-group-website
         run: npm ci
 
       - name: Build project
-        working-directory: skp-group-website
         run: npm run build
 
       - name: Deploy to Vercel
@@ -34,5 +32,4 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: skp-group-website
           vercel-args: --prod

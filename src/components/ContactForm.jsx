@@ -45,7 +45,7 @@ function ContactForm() {
     }))
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
 
     setStatus('')
@@ -62,8 +62,21 @@ function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      window.open(href, '_blank', 'noopener,noreferrer')
+      const response = await fetch(`${import.meta.env.BASE_URL}api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Unable to send enquiry')
+      }
+
+      window.open(href, '_blank', 'noopener,noreferrer')
       setStatus('success')
 
       setFormData({
